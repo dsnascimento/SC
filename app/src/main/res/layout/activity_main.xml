@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundsc">
+
+    <ImageView
+        android:id="@+id/logoSC"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+
+        android:background="@drawable/logosc"
+
+        android:layout_gravity="center_vertical|center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/linearCampos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblEmailTL"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="Email"
+
+            android:textColor="@color/Preto"/>
+
+        <EditText
+            android:id="@+id/txtEmailTL"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="10dp"
+
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:inputType="textEmailAddress"
+            android:hint="Digite@seuEmail"
+
+            android:textColor="@color/Preto"
+            android:background="@color/Branco"/>
+
+        <TextView
+            android:id="@+id/lblSenhaTL"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="Senha"
+
+            android:textColor="@color/Preto"/>
+
+        <EditText
+            android:id="@+id/txtSenhaTL"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="10dp"
+
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:inputType="numberPassword"
+            android:hint="Digite Sua Senha"
+
+            android:textColor="@color/Preto"
+            android:background="@color/Branco"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearBotoesTL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnEntrarTL"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+
+            android:text="Entrar"
+            android:textColor="@color/Branco"
+            android:background="@color/Azul"
+            />
+
+        <Button
+            android:id="@+id/btnRegistrarTL"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:text="Registrar-se"
+            android:textColor="@color/Branco"
+            android:background="@color/Vermelho"
+
+            android:layout_marginTop="15dp" />
+
+
+    </LinearLayout>
+</LinearLayout>
