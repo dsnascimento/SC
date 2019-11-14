@@ -51,14 +51,14 @@
         app:layout_constraintTop_toBottomOf="@+id/LinearTP">
 
 
-    <Button
-        android:id="@+id/btnLogOutTP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/btnLogOutTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-        android:textColor="@color/Branco"
-        android:background="@color/Vermelho"
-        android:text="Sair"/>
+            android:textColor="@color/Branco"
+            android:background="@color/Vermelho"
+            android:text="Sair"/>
 
     </LinearLayout>
 

@@ -54,13 +54,13 @@ public class TelaPerfil extends AppCompatActivity {
     }
 
     private void verificaUser() {
-    if(user == null){
-        finish();
-    }else{
-        lblNomeTP.setText("Nome: "+user.getDisplayName());
-        lblIdTP.setText("ID: "+user.getUid());
-        lblEmailTP.setText("Email: "+user.getEmail());
-    }
+        if(user == null){
+            finish();
+        }else{
+            lblNomeTP.setText("Nome: "+user.getDisplayName());
+            lblIdTP.setText("ID: "+user.getUid());
+            lblEmailTP.setText("Email: "+user.getEmail());
+        }
 
     }
 

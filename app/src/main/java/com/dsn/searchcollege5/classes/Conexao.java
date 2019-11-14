@@ -14,7 +14,7 @@ public class Conexao {
     private  Conexao(){
 //depois implementar apra chama-lo
     }
-//se esse metodo for chamado e o oobjeto for igual a nulo devera inicializar o firebase
+    //se esse metodo for chamado e o oobjeto for igual a nulo devera inicializar o firebase
     public  static FirebaseAuth getFirebaseAuth(){
         if(firebaseAuth == null){
             inicializarFirebasAuth();
@@ -43,7 +43,7 @@ public class Conexao {
     public static FirebaseUser getFirebaseUser(){
         return  firebaseUser;
     }
-//responsavel pela saida da aplicação.
+    //responsavel pela saida da aplicação.
     public static void logOut(){
         firebaseAuth.signOut();
     }

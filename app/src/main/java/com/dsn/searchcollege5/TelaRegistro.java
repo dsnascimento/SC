@@ -18,10 +18,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class TelaRegistro extends AppCompatActivity {
 
-  private  EditText txtNomeCompletoTR,txtEmailTR,txtSenhaTR;
-  private Button btnSalvarTR,btnVoltarTR;
+    private  EditText txtNomeCompletoTR,txtEmailTR,txtSenhaTR;
+    private Button btnSalvarTR,btnVoltarTR;
 
-  private  FirebaseAuth auth;
+    private  FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +72,7 @@ public class TelaRegistro extends AppCompatActivity {
                     }
                 });
     }
-//menssagem a ser exibida se o login for salvo com sucesso
+    //menssagem a ser exibida se o login for salvo com sucesso
     private void alert(String msg){
         Toast.makeText(TelaRegistro.this,msg,Toast.LENGTH_SHORT).show();
     }
