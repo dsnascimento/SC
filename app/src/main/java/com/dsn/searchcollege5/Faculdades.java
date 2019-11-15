@@ -8,6 +8,8 @@ public class Faculdades {
     private String cidade;
     private String curso;
 
+    //desenho do listview
+
     public Faculdades(String nome, String endereco, int imagem, String cidade,String sobre,String curso) {
 
         this.nome = nome;

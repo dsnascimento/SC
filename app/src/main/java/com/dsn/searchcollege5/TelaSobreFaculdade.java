@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,13 +15,15 @@ import java.util.List;
 
 public class TelaSobreFaculdade extends AppCompatActivity {
 
-
+    private Button btnComentarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_sobre_faculdade);
 
+        Button btnCometarios = (Button) findViewById(R.id.btnComentarios);
+        btnCometarios.setOnClickListener(cliqueComentarios);
 
         ImageView imagem = findViewById(R.id.imageView);
         TextView nome = (TextView) findViewById(R.id.SobreFaculdade);
@@ -44,4 +48,13 @@ public class TelaSobreFaculdade extends AppCompatActivity {
         imagem.setImageResource(img);
         curso.setText(cursos);
     }
+
+    View.OnClickListener cliqueComentarios = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            Intent Tp = new Intent(TelaSobreFaculdade.this, TelaComentario.class);
+            startActivity(Tp);
+        }
+    };
 }
