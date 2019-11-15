@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
                 String email = txtEmailTL.getText().toString().trim();
                 String senha = txtSenhaTL.getText().toString().trim();
                 logar(email,senha);
-            }
+
+                }
         });
     }
 

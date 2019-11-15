@@ -2,6 +2,7 @@ package com.dsn.searchcollege5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,8 @@ public class TelaPerfil extends AppCompatActivity {
             public void onClick(View v) {
                 Conexao.logOut();
                 finish();
+                Intent TP = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(TP);
             }
         });
     }

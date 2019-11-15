@@ -50,8 +50,7 @@ public class TelaRegistro extends AppCompatActivity {
                 //esse método irá ser ultilizado para criar uma nova conta
                 criarUser(email,senha,nomec);
 
-                Intent TP = new Intent(getApplicationContext(), TelaPerfil.class);
-                startActivity(TP);
+
             }
         });
     }
