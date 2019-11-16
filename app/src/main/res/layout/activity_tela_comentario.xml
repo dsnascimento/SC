@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaComentario"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundsc">
+
+
+
+    <LinearLayout
+        android:id="@+id/LisTelaComente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/lblComente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comente Aqui"
+
+            android:textColor="@color/Preto"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"/>
+
+        <EditText
+            android:id="@+id/txtComente"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:textColorHint="@color/Preto"
+            android:hint="Deixe Seu Comentario"
+
+            android:textColor="@color/Preto"
+            android:background="@color/Branco"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <Button
+            android:id="@+id/btnComente"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Envie Seu Comentario"
+            android:layout_marginTop="15dp"
+
+            android:background="@color/Azul"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lisComentarios"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/listComentariosTC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVoltarTC"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+
+        android:layout_marginTop="15dp"
+
+        android:textColor="@color/Branco"
+        android:background="@color/Vermelho"
+        android:layout_gravity="center_vertical|center_horizontal"/>
+
+</LinearLayout>
+
