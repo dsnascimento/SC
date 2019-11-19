@@ -24,11 +24,13 @@
             android:layout_height="wrap_content"
             android:text="NOME FACULDADE"
             android:layout_marginTop="10dp"
+            android:textColor="@color/Preto"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title" />
         <TextView
             android:id="@+id/endereco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Preto"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:text="Endereço: "/>
 
@@ -36,6 +38,7 @@
             android:id="@+id/cidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/Preto"
             android:text="Cidade: "
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 

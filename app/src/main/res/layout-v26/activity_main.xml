@@ -51,7 +51,7 @@
 
             android:textColor="@color/Preto"
             android:background="@color/Branco"
-            android:autofillHints="" tools:targetApi="o"/>
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/lblSenhaTL"
@@ -79,7 +79,7 @@
 
             android:textColor="@color/Preto"
             android:background="@color/Branco"
-            android:autofillHints="" tools:targetApi="o"/>
+            android:autofillHints="" />
     </LinearLayout>
 
     <LinearLayout

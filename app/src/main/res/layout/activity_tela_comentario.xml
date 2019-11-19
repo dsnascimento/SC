@@ -25,7 +25,7 @@
 
             android:textColor="@color/Preto"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="10dp"/>
 
         <EditText
             android:id="@+id/txtComente"
@@ -53,14 +53,14 @@
     <LinearLayout
         android:id="@+id/lisComentarios"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:layout_marginTop="40dp"
         android:orientation="horizontal">
 
         <ListView
             android:id="@+id/listComentariosTC"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
 
     </LinearLayout>
