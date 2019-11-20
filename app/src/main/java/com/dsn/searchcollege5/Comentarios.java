@@ -1,14 +1,7 @@
 package com.dsn.searchcollege5;
 
-import android.widget.Button;
-
-import androidx.annotation.NonNull;
-
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.UUID;
 
 public class Comentarios {
 
@@ -16,6 +9,7 @@ public class Comentarios {
     private String nomeTC;
     private String txtComenteTC;
     private String idFaculdade;
+    private Integer posicao;
 
 
 
@@ -31,7 +25,7 @@ public class Comentarios {
         DatabaseReference firebaseRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference comentarios = firebaseRef
                 .child("comentarios_usuario")
-                .child( getIdFaculdade() )
+                // .child( getIdFaculdade() )
                 .child(getIdFaculdade());
         comentarios.setValue( this );
 
@@ -56,16 +50,32 @@ public class Comentarios {
         this.nomeTC = nomeTC;}
 
     public String getTxtComente() {
-        return txtComenteTC;
+        return getTxtComenteTC();
     }
 
     public void setTxtComente(String txtComente) {
-        this.txtComenteTC = txtComente;
+        this.setTxtComenteTC(txtComente);
     }
 
     @Override
     public String toString() {
+        return getTxtComenteTC();
+    }
+
+    public String getTxtComenteTC() {
         return txtComenteTC;
+    }
+
+    public void setTxtComenteTC(String txtComenteTC) {
+        this.txtComenteTC = txtComenteTC;
+    }
+
+    public Integer getPosicao() {
+        return posicao;
+    }
+
+    public void setPosicao(Integer posicao) {
+        this.posicao = posicao;
     }
 }
 

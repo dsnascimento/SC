@@ -48,7 +48,7 @@ public class TelaSobreFaculdade extends AppCompatActivity {
 
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
-        firebaseDatabase.setPersistenceEnabled(true);
+//        firebaseDatabase.setPersistenceEnabled(true);
         databaseReference = firebaseDatabase.getReference();
 
         listnome = (ListView) findViewById(R.id.lstComentariosss);
@@ -88,7 +88,6 @@ public class TelaSobreFaculdade extends AppCompatActivity {
 
     }
 
-
     View.OnClickListener cliqueComentarios = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -98,39 +97,49 @@ public class TelaSobreFaculdade extends AppCompatActivity {
 
             Comentarios comentario = new Comentarios();
             comentario.setTxtComente(txtComenteS.getText().toString());
+            comentario.setPosicao(posicao);
             comentario.setIdFaculdade(posicao.toString());
             comentario.salvar();
         }
     };
 
 
-
-
-
-
     private void recuperarComentarios() {
         Intent intent = getIntent();
-        Integer posicao = (Integer) intent.getSerializableExtra("p");
+        final Integer posicao = (Integer) intent.getSerializableExtra("p");
 
-        databaseReference.child("comentarios_usuario").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                comentarios.clear();
-                for(DataSnapshot objSnapshot:dataSnapshot.getChildren()){
-                    Comentarios c2 = objSnapshot.getValue(Comentarios.class);
-                    comentarios.add(c2);
-                }
-                arrayAdapter = new ArrayAdapter<Comentarios>(TelaSobreFaculdade.this, android.R.layout.simple_list_item_1,
-                        comentarios);
-                listnome.setAdapter(arrayAdapter);
-                //arrayAdapter.notifyDataSetChanged();
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+        FirebaseDatabase.getInstance().getReference().child("comentarios_usuario").
+
+                //databaseReference.
+                        addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+//professor fez-----
+                        for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+
+                            Comentarios c2 = postSnapshot.getValue(Comentarios.class);
+                            if ( c2.getPosicao()==posicao){
+                                comentarios.add(c2);
+                            }
+                        }
+                        arrayAdapter = new ArrayAdapter<Comentarios>(TelaSobreFaculdade.this, android.R.layout.simple_list_item_1,
+                                comentarios);
+                        listnome.setAdapter(arrayAdapter);
+                        arrayAdapter.notifyDataSetChanged();
+                    }
+                    //professor fez-----
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        // Getting Post failed, log a message
+                        //Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
+                        // ...
+                    }
+                });
+
+
 
 
     }
