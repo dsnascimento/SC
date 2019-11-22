@@ -17,7 +17,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.dsn.searchcollege5.classes.Conexao;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,7 +54,6 @@ public class TelaSobreFaculdade extends AppCompatActivity {
         databaseReference = firebaseDatabase.getReference();
 
         listnome = (ListView) findViewById(R.id.lstComentariosss);
-
 
         txtComenteS = findViewById(R.id.txtComenteS);
         Button btnCometarios = (Button) findViewById(R.id.btnComentarios);
@@ -96,6 +97,7 @@ public class TelaSobreFaculdade extends AppCompatActivity {
 
 
             Comentarios comentario = new Comentarios();
+
             comentario.setTxtComente(txtComenteS.getText().toString());
             comentario.setPosicao(posicao);
             comentario.setIdFaculdade(posicao.toString());
@@ -110,7 +112,7 @@ public class TelaSobreFaculdade extends AppCompatActivity {
 
 
 
-        FirebaseDatabase.getInstance().getReference().child("comentarios_usuario").
+        FirebaseDatabase.getInstance().getReference().child("comentarios_usuario").child(posicao.toString()).
 
                 //databaseReference.
                         addValueEventListener(new ValueEventListener() {
@@ -121,9 +123,9 @@ public class TelaSobreFaculdade extends AppCompatActivity {
                         for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
 
                             Comentarios c2 = postSnapshot.getValue(Comentarios.class);
-                            if ( c2.getPosicao()==posicao){
-                                comentarios.add(c2);
-                            }
+                            // if ( c2.getPosicao() == posicao){
+                            comentarios.add(c2);
+                            // }
                         }
                         arrayAdapter = new ArrayAdapter<Comentarios>(TelaSobreFaculdade.this, android.R.layout.simple_list_item_1,
                                 comentarios);

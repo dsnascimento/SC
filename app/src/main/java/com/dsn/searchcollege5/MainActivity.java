@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 String senha = txtSenhaTL.getText().toString().trim();
                 logar(email,senha);
 
-                }
+            }
         });
     }
 

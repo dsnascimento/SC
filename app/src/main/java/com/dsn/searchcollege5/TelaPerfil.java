@@ -62,7 +62,8 @@ public class TelaPerfil extends AppCompatActivity {
         }else{
             lblNomeTP.setText("Nome: "+user.getDisplayName());
             lblIdTP.setText("ID: "+user.getUid());
-            lblEmailTP.setText("Email: "+user.getEmail());
+            lblEmailTP.setText("Email: "+user.getEmail())
+            ;
         }
 
     }

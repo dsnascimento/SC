@@ -9,71 +9,66 @@
     android:orientation="vertical"
     tools:context=".TelaSobreFaculdade">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="350dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center">
 
 
-            </ImageView>
+        </ImageView>
 
 
-            <TextView
-                android:id="@+id/SobreFaculdade"
-                android:layout_width="345dp"
-                android:layout_height="175dp"
-                android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/SobreFaculdade"
+            android:layout_width="345dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"/>
 
 
-            <TextView
-                android:id="@+id/Cursos"
-                android:layout_width="345dp"
-                android:layout_height="100dp"
-                android:hint="Cursos"
-                android:textColor="@color/Preto"
-                android:textSize="14dp"
-                android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/Cursos"
+            android:layout_width="345dp"
+            android:layout_height="100dp"
+            android:hint="Cursos"
+            android:textColor="@color/Preto"
+            android:textSize="14dp"
+            android:layout_gravity="center"/>
 
 
-            <EditText
-                android:id="@+id/txtComenteS"
-                android:layout_width="350dp"
-                android:layout_height="35dp"
-                android:background="@color/Branco"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="25dp"
-                android:layout_gravity="center"
-                android:textColor="@color/Preto"
-                android:hint="Deixe Seu Comentario"
-                android:textColorHint="@color/Preto"/>
+        <EditText
+            android:id="@+id/txtComenteS"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:background="@color/Branco"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center"
+            android:textColor="@color/Preto"
+            android:hint="Deixe Seu Comentario"
+            android:textColorHint="@color/Preto"/>
 
 
-            <Button
-                android:id="@+id/btnComentarios"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:background="@color/Azul"
-                android:text="Comentar"
-                android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btnComentarios"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@color/Azul"
+            android:text="Comentar"
+            android:layout_gravity="center"/>
 
-            <ListView
-                android:id="@+id/lstComentariosss"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"/>
+        <ListView
+            android:id="@+id/lstComentariosss"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
 
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </LinearLayout>
