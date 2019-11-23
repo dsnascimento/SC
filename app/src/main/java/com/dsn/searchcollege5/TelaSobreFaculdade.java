@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.dsn.searchcollege5.classes.Conexao;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -37,6 +38,7 @@ public class TelaSobreFaculdade extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private FirebaseDatabase firebaseDatabase;
     private List<Comentarios> comentarios = new ArrayList<>();
+    private FirebaseAuth auth;
 
     ArrayAdapter<Comentarios> arrayAdapter;
 

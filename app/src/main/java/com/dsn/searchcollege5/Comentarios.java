@@ -14,9 +14,15 @@ public class Comentarios {
     private String txtComenteTC;
     private String idFaculdade;
     private Integer posicao;
+    private String email = "egonascimento@hotmail.com";
 
+    public String getEmail() {
+        return email;
+    }
 
-
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Comentarios() {
     }
@@ -81,7 +87,7 @@ public class Comentarios {
     @NonNull
     @Override
     public String toString() {
-        return txtComenteTC;
+        return txtComenteTC + " " + email;
     }
 }
 
